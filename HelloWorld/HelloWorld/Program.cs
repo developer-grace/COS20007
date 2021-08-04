@@ -14,28 +14,32 @@ namespace HelloWorld
             string name;
             name = Console.ReadLine ();
 
+            Message[] messages = new Message[4];
+            messages[0] = new Message("Welcome back, Grace! Ready to girlboss, gaslight, gatekeep today?");
+            messages[1] = new Message("M-m-m-Mario?");
+            messages[2] = new Message("Hello Dick, don't forget to apologise for last night's mansplain manipulate malewife on Twitter.");
+            messages[3] = new Message("Bit of a silly name, goofy even, if you ask me.");
+
+
+
             if (name == "Grace")
             {
-                myMessage = new Message("Welcome back, Grace! Ready to girlboss, gaslight, gatekeep today?");
-                myMessage.Print();
+                messages[0].Print();
+            }
+
+            else if (name == "Mario")
+            {
+                messages[1].Print();
             }
 
             else if (name == "Richard")
             {
-                myMessage = new Message("Hello Dick. Don't forget to pay your reparations to the land you've stolen from.");
-                myMessage.Print();
-            }
-
-            else if (name == "Ella")
-            {
-                myMessage = new Message("Welcome back, Ella!");
-                myMessage.Print();
+                messages[2].Print();
             }
 
             else
             {
-                myMessage = new Message("That's a bit of a silly name innit luv?");
-                myMessage.Print();
+                messages[3].Print();
             }
         }
     }

@@ -10,3 +10,15 @@
 /Users/gracetang/OneDrive - Swinburne University/2021 Semester 2/code_COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.dll
 /Users/gracetang/OneDrive - Swinburne University/2021 Semester 2/code_COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.pdb
 /Users/gracetang/OneDrive - Swinburne University/2021 Semester 2/code_COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.genruntimeconfig.cache
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.deps.json
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.runtimeconfig.json
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.runtimeconfig.dev.json
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.dll
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.pdb
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.csproj.AssemblyReference.cache
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.AssemblyInfoInputs.cache
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.AssemblyInfo.cs
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.csproj.CoreCompileInputs.cache
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.dll
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.pdb
+/Users/gracetang/COS20007/HelloWorld/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.genruntimeconfig.cache
