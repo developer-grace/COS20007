@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gracetang/COS20007/HelloWorld/HelloWorld/HelloWorld.csproj",
+      "projectUniqueName": "/Users/gracetang/COS20007/Week-1/HelloWorld/HelloWorld/HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "/Users/gracetang/COS20007/HelloWorld/HelloWorld/HelloWorld.csproj",
+      "projectPath": "/Users/gracetang/COS20007/Week-1/HelloWorld/HelloWorld/HelloWorld.csproj",
       "packagesPath": "/Users/gracetang/.nuget/packages/",
-      "outputPath": "/Users/gracetang/COS20007/HelloWorld/HelloWorld/obj/",
+      "outputPath": "/Users/gracetang/COS20007/Week-1/HelloWorld/HelloWorld/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/gracetang/.config/NuGet/NuGet.Config"

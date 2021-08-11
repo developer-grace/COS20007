@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.HelloWorld PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="Message.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="15" Column="1" />
+      <File FileName="Message.cs" Line="18" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

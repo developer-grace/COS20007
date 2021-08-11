@@ -3,16 +3,16 @@ namespace HelloWorld
 {
     public class Message
     {
-        private string text;
+        private string _text;
 
         public Message(string txt)
         {
-            text = txt;
+            _text = txt;
         }
 
         public void Print()
         {
-            Console.WriteLine(text);
+            Console.WriteLine(_text);
         }
     }
 }
