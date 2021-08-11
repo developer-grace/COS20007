@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/CounterTest.csproj": {}
+  },
+  "projects": {
+    "/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/CounterTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/CounterTest.csproj",
+        "projectName": "CounterTest",
+        "projectPath": "/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/CounterTest.csproj",
+        "packagesPath": "/Users/gracetang/.nuget/packages/",
+        "outputPath": "/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/gracetang/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

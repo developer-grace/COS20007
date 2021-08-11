@@ -1,0 +1,16 @@
+/Users/gracetang/COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.csproj.AssemblyReference.cache
+/Users/gracetang/COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.AssemblyInfoInputs.cache
+/Users/gracetang/COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.AssemblyInfo.cs
+/Users/gracetang/COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.csproj.CoreCompileInputs.cache
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/bin/Debug/netcoreapp3.1/CounterTest.deps.json
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/bin/Debug/netcoreapp3.1/CounterTest.runtimeconfig.json
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/bin/Debug/netcoreapp3.1/CounterTest.runtimeconfig.dev.json
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/bin/Debug/netcoreapp3.1/CounterTest.dll
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/bin/Debug/netcoreapp3.1/CounterTest.pdb
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.csproj.AssemblyReference.cache
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.AssemblyInfoInputs.cache
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.AssemblyInfo.cs
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.csproj.CoreCompileInputs.cache
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.dll
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.pdb
+/Users/gracetang/code_COS20007/Week-2/CounterObject/CounterObject/obj/Debug/netcoreapp3.1/CounterTest.genruntimeconfig.cache
