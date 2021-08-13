@@ -26,8 +26,10 @@ namespace ShapeDrawer
                 if (SplashKit.KeyTyped(KeyCode.SpaceKey))
                 {
                     Point2D mousePosition = SplashKit.MousePosition();
-                    myShape.IsAt(mousePosition);
-                    myShape.Color = SplashKit.RandomRGBColor(255);
+                    if (myShape.IsAt(mousePosition))
+                    {
+                        myShape.Color = SplashKit.RandomRGBColor(255);
+                    }
                 }
 
                 myShape.Draw();
