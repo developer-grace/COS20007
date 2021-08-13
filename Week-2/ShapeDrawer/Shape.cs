@@ -23,7 +23,7 @@ namespace ShapeDrawer
             }
             set
             {
-               _color = value;
+                _color = value;
             }
 
         }
@@ -58,8 +58,9 @@ namespace ShapeDrawer
             {
                 return _width;
             }
-            set {
-                _width = value; /* value is an int datatype keyword, ask about the keyword here for a float; do we need a cast? */
+            set
+            {
+                _width = value; 
             }
         }
 
@@ -85,10 +86,10 @@ namespace ShapeDrawer
             {
                 return true;
             }
-            //if ((_x < 100) && (_y < 100))
-            //{
-            //    return true;
-            //}
+            if ((_x < 100) && (_y < 100))
+            {
+                return true;
+            }
             else
             {
                 return false;
