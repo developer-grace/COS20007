@@ -82,13 +82,16 @@ namespace ShapeDrawer
         }
         public bool IsAt(Point2D pt)
         {
-            if ((_x > 0) && (_y > 0))
+
+            if(pt.X > _x && pt.X < _x + _width)
             {
-                return true;
-            }
-            if ((_x < 100) && (_y < 100))
-            {
-                return true;
+                if (pt.Y > _y && pt.Y < _y + _height)
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
             }
             else
             {
