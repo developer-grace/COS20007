@@ -7,10 +7,11 @@ namespace ShapeDrawer
     {
         public static void Main()
         {
+            new Window("Shape Drawer", 800, 600);
+
             Shape myShape;
             myShape = new Shape();
 
-            new Window("Shape Drawer", 800, 600);
             do
             {
                 SplashKit.ProcessEvents();
@@ -18,6 +19,11 @@ namespace ShapeDrawer
 
                 myShape.Draw();
 
+                if (SplashKit.MouseClicked(MouseButton.LeftButton))
+                {
+                    myShape.X = SplashKit.MouseX();
+                    myShape.Y = SplashKit.MouseY();
+                }
                 SplashKit.RefreshScreen();
             } while (!SplashKit.WindowCloseRequested("Shape Drawer"));
         }
