@@ -10,7 +10,6 @@ namespace ShapeDrawer
         private Color color;
         private Color _background;
 
-
         public Drawing(Color background)
         {
             _shapes = new List<Shape>();
@@ -18,6 +17,16 @@ namespace ShapeDrawer
 
         public Drawing() : this(Color.White)
         {
+        }
+
+        public void Draw()
+        {
+            SplashKit.ClearScreen();
+            foreach(Shape shape in _shapes)
+            {
+                shape.Draw();
+            }
+
         }
 
         public Color Background
@@ -30,6 +39,18 @@ namespace ShapeDrawer
             {
                 _background = value;
             }
+        }
+
+        public int ShapeCount
+        {
+            get {
+                return _shapes.Count;
+            }
+        }
+
+        public void AddShape(Shape shape)
+        {
+            _shapes.Add(shape);
         }
 
     }
