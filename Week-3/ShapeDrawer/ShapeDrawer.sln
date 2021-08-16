@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeDrawer", "ShapeDrawer.csproj", "{A203A5CB-D972-49EA-A8E1-D3C62B8ACCE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A203A5CB-D972-49EA-A8E1-D3C62B8ACCE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A203A5CB-D972-49EA-A8E1-D3C62B8ACCE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A203A5CB-D972-49EA-A8E1-D3C62B8ACCE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A203A5CB-D972-49EA-A8E1-D3C62B8ACCE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {060E0924-8A05-443B-88C9-97758807A85B}
+	EndGlobalSection
+EndGlobal

@@ -28,5 +28,13 @@ namespace Swin_Adventure
         {
             _identifiers.Add(id.ToLower());
         }
+
+        public string FirstId
+        {
+            get
+            {
+                return _identifiers[0];
+            }
+        }
     }
 }
