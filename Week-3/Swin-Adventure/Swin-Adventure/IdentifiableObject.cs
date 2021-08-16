@@ -7,7 +7,7 @@ namespace Swin_Adventure
     {
         private List<string> _identifiers;
 
-        public IdentifiableObject(string[] idents)
+        public IdentifiableObject(string[] idents) : this()
         {
             foreach(string id in idents)
             {
@@ -15,15 +15,16 @@ namespace Swin_Adventure
             }
         }
 
+        public IdentifiableObject()
+        {
+            _identifiers = new List<string>();
+        }
+
         public Boolean AreYou(string id)
         {
-            if(_identifiers.Contains(id))
-            {
-                return true;
-            }
-            return false;
+            return _identifiers.Contains(id.ToLower());
         }
-        
+
         public void AddIdentifier( string id )
         {
             _identifiers.Add(id.ToLower());
