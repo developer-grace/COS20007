@@ -1,0 +1,13 @@
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/bin/Debug/netcoreapp3.1/Swin-Adventure.deps.json
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/bin/Debug/netcoreapp3.1/Swin-Adventure.runtimeconfig.json
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/bin/Debug/netcoreapp3.1/Swin-Adventure.runtimeconfig.dev.json
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/bin/Debug/netcoreapp3.1/Swin-Adventure.dll
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/bin/Debug/netcoreapp3.1/Swin-Adventure.pdb
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/obj/Debug/netcoreapp3.1/Swin-Adventure.csproj.AssemblyReference.cache
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/obj/Debug/netcoreapp3.1/Swin-Adventure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/obj/Debug/netcoreapp3.1/Swin-Adventure.AssemblyInfoInputs.cache
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/obj/Debug/netcoreapp3.1/Swin-Adventure.AssemblyInfo.cs
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/obj/Debug/netcoreapp3.1/Swin-Adventure.csproj.CoreCompileInputs.cache
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/obj/Debug/netcoreapp3.1/Swin-Adventure.dll
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/obj/Debug/netcoreapp3.1/Swin-Adventure.pdb
+/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/obj/Debug/netcoreapp3.1/Swin-Adventure.genruntimeconfig.cache
