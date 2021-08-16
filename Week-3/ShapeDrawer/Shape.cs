@@ -7,6 +7,7 @@ namespace ShapeDrawer
         private float _x, _y;
         private int _width, _height;
         private Color _color;
+        private bool _selected;
 
         public Shape()
         {
@@ -96,6 +97,18 @@ namespace ShapeDrawer
             else
             {
                 return false;
+            }
+        }
+
+        public bool Selected
+        {
+            get
+            {
+                return _selected;
+            }
+            set
+            {
+                _selected = value;
             }
         }
 

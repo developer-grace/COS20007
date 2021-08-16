@@ -9,8 +9,9 @@ namespace ShapeDrawer
         {
             new Window("Shape Drawer", 800, 600);
 
-            Shape myShape;
-            myShape = new Shape();
+            
+            Drawing myDrawing;
+            myDrawing = new Drawing();
 
             do
             {
