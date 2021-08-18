@@ -27,9 +27,25 @@ namespace ShapeDrawer
             SplashKit.ClearScreen();
             foreach(Shape shape in _shapes)
             {
+                // Create a Shape Object, assign it to local variable shape
                 shape.Draw();
             }
 
+        }
+
+        public void AddShape(Shape shape)
+        {
+            // Adding a Shape Object to generic List, which is Drawing
+            _shapes.Add(shape);
+        }
+
+        // TODO: Follow pseudocode in Step 15
+        public void SelectShapesAt(Point2D select_pt)
+        {
+            foreach (Shape s in _shapes)
+            {
+                // write code here
+            }
         }
 
         public Color Background
@@ -49,10 +65,7 @@ namespace ShapeDrawer
             get { return _shapes.Count; }
         }
 
-        public void AddShape(Shape shape)
-        {
-            _shapes.Add(shape);
-        }
+        
 
     }
 }
