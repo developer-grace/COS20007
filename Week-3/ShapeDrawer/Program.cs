@@ -13,16 +13,16 @@ namespace ShapeDrawer
             Drawing myDrawing;
             myDrawing = new Drawing();
 
-            do
+            do // Event loop
             {
                 SplashKit.ProcessEvents();
                 SplashKit.ClearScreen();
 
-                if (SplashKit.MouseClicked(MouseButton.LeftButton))
+                if (SplashKit.MouseClicked(MouseButton.LeftButton) )
                 {
-                    // TODO: Check if the user has clicked the left mouse button, and if they have added a new Shape to your Drawing Object based on the mouse's location.
+                    // TODO: Check if the user has added a new Shape to your Drawing Object based on the mouse's location.
 
-                    // there's already a Drawing created?
+                    // What happens when left mouse button is clicked?
                 }
 
                 if (SplashKit.KeyTyped(KeyCode.SpaceKey))
