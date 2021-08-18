@@ -17,6 +17,15 @@ namespace ShapeDrawer
 
         public Drawing() : this(Color.White)
         {
+            // If Shape Objects were put in a list, how to access the Objects in the list and therefore the X and Y properties?
+
+            // Using SplashKit.MouseX() and SplashKit.MouseY() to change the location of thisShape, then this function in main
+
+            // How to access Shapes.cs from here?
+
+            // TODO:
+            
+
         }
 
         public void Draw()
@@ -43,9 +52,7 @@ namespace ShapeDrawer
 
         public int ShapeCount
         {
-            get {
-                return _shapes.Count;
-            }
+            get { return _shapes.Count; }
         }
 
         public void AddShape(Shape shape)

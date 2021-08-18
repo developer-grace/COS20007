@@ -20,8 +20,9 @@ namespace ShapeDrawer
 
                 if (SplashKit.MouseClicked(MouseButton.LeftButton))
                 {
-                    myShape.X = SplashKit.MouseX();
-                    myShape.Y = SplashKit.MouseY();
+                    // TODO: Check if the user has clicked the left mouse button, and if they have added a new Shape to your Drawing Object based on the mouse's location.
+
+                    // there's already a Drawing created?
                 }
 
                 if (SplashKit.KeyTyped(KeyCode.SpaceKey))
