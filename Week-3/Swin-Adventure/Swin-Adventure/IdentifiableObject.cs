@@ -32,6 +32,7 @@ namespace Swin_Adventure
 
         public string FirstId
         {
+            // add if statement to check if _identifiers is empty
             get
             {
                 return _identifiers[0];
