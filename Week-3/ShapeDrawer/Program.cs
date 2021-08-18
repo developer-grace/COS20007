@@ -30,7 +30,7 @@ namespace ShapeDrawer
                     Point2D mousePosition = SplashKit.MousePosition();
                     if (myShape.IsAt(mousePosition))
                     {
-                        myShape.Color = SplashKit.RandomRGBColor(255);
+                        myDrawing.Background = SplashKit.RandomRGBColor(255);
                     }
                 }
 

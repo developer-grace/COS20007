@@ -17,15 +17,9 @@ namespace ShapeDrawer
 
         public Drawing() : this(Color.White)
         {
-            // If Shape Objects were put in a list, how to access the Objects in the list and therefore the X and Y properties?
-
-            // Using SplashKit.MouseX() and SplashKit.MouseY() to change the location of thisShape, then this function in main
-
-            // How to access Shapes.cs from here?
-
-            // TODO:
-            
-
+            // Accessing first Shape Object in generic List
+            _shapes[0].X = SplashKit.MouseX();
+            _shapes[0].Y = SplashKit.MouseY();
         }
 
         public void Draw()
