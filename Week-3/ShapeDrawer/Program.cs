@@ -9,7 +9,7 @@ namespace ShapeDrawer
         {
             new Window("Shape Drawer", 800, 600);
 
-            
+            // local variables
             Drawing myDrawing;
             myDrawing = new Drawing();
 
@@ -20,9 +20,13 @@ namespace ShapeDrawer
 
                 if (SplashKit.MouseClicked(MouseButton.LeftButton) )
                 {
-                    // TODO: Check if the user has added a new Shape to your Drawing Object based on the mouse's location.
+                    // initialising local variable new_shape for Shape Object
+                    Shape new_shape;
+                    new_shape = new Shape();
 
-                    // What happens when left mouse button is clicked?
+                    // add new Shape Object to the Drawing List Object
+                    myDrawing.Draw();
+                    myDrawing.AddShape(new_shape);
                 }
 
                 if (SplashKit.KeyTyped(KeyCode.SpaceKey))
