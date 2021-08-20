@@ -32,10 +32,16 @@ namespace Swin_Adventure
 
         public string FirstId
         {
-            // add if statement to check if _identifiers is empty
-            get
+            get 
             {
-                return _identifiers[0];
+                if (_identifiers.Count >= 1 )
+                {
+                    return _identifiers[0];
+                }
+                else
+                {
+                    return "" ;
+                }
             }
         }
     }
