@@ -7,19 +7,16 @@ namespace ShapeDrawer
     public class Drawing
     {
         private readonly List<Shape> _shapes;
-        private Color color;
         private Color _background;
 
         public Drawing(Color background)
         {
             _shapes = new List<Shape>();
+            _background = background;
         }
 
         public Drawing() : this(Color.White)
         {
-            // Accessing first Shape Object in generic List
-            _shapes[0].X = SplashKit.MouseX();
-            _shapes[0].Y = SplashKit.MouseY();
         }
 
         public void Draw()
@@ -46,6 +43,9 @@ namespace ShapeDrawer
                 if (s.IsAt(select_pt))
                 {
                     s.Selected = true;
+                } else
+                {
+                    s.Selected = false;
                 }
             }
         }

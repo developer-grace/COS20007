@@ -23,22 +23,35 @@ namespace ShapeDrawer
                     // initialising local variable new_shape for Shape Object
                     Shape new_shape;
                     new_shape = new Shape();
+                    new_shape.X = SplashKit.MouseX();
+                    new_shape.Y = SplashKit.MouseY();
 
                     // add new Shape Object to the Drawing List Object
-                    myDrawing.Draw();
+                    
                     myDrawing.AddShape(new_shape);
+                    
                 }
 
-                if (SplashKit.KeyTyped(KeyCode.SpaceKey))
+                if (SplashKit.MouseClicked(MouseButton.RightButton))
                 {
-                    Point2D mousePosition = SplashKit.MousePosition();
-                    if (myShape.IsAt(mousePosition))
-                    {
-                        myDrawing.Background = SplashKit.RandomRGBColor(255);
-                    }
+                    // When the right mouse button is clicked on the position of a shape,
+                    // the shape is selected
+                    Point2D pt;
+                    pt = SplashKit.MousePosition();
+                    myDrawing.SelectShapesAt(pt);
                 }
 
-                myShape.Draw();
+                //if (SplashKit.KeyTyped(KeyCode.SpaceKey))
+                //{
+                //    Point2D mousePosition = SplashKit.MousePosition();
+                //    if (myShape.IsAt(mousePosition))
+                //    {
+                //        myDrawing.Background = SplashKit.RandomRGBColor(255);
+                //    }
+                //}
+
+                //myShape.Draw();
+                myDrawing.Draw();
 
                 SplashKit.RefreshScreen();
             } while (!SplashKit.WindowCloseRequested("Shape Drawer"));

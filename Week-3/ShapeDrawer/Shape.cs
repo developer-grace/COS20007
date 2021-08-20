@@ -80,6 +80,11 @@ namespace ShapeDrawer
         public void Draw()
         {
             SplashKit.FillRectangle(_color, _x, _y, _width, _height);
+
+            if (_selected == true)
+            {
+                DrawOutline();
+            }
         }
         public bool IsAt(Point2D pt)
         {
@@ -89,15 +94,9 @@ namespace ShapeDrawer
                 if (pt.Y > _y && pt.Y < _y + _height)
                 {
                     return true;
-                } else
-                {
-                    return false;
                 }
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
         public bool Selected
@@ -112,5 +111,9 @@ namespace ShapeDrawer
             }
         }
 
+        public void DrawOutline()
+        {
+            SplashKit.DrawRectangle(Color.Black, _x - 2, _y - 2, 4 + _width, 4 + _height);
+        }
     }
 }
