@@ -9,7 +9,7 @@ namespace Swin_Adventure
 
         public IdentifiableObject(string[] idents) : this()
         {
-            foreach(string id in idents)
+            foreach (string id in idents)
             {
                 this.AddIdentifier(id);
             }
@@ -25,22 +25,22 @@ namespace Swin_Adventure
             return _identifiers.Contains(id.ToLower());
         }
 
-        public void AddIdentifier( string id )
+        public void AddIdentifier(string id)
         {
             _identifiers.Add(id.ToLower());
         }
 
         public string FirstId
         {
-            get 
+            get
             {
-                if (_identifiers.Count >= 1 )
+                if (_identifiers.Count >= 1)
                 {
                     return _identifiers[0];
                 }
                 else
                 {
-                    return "" ;
+                    return "";
                 }
             }
         }

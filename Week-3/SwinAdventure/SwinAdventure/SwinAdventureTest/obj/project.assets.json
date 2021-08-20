@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
+    "net5.0": {
       "Microsoft.CodeCoverage/16.5.0": {
         "type": "package",
         "compile": {
@@ -1226,14 +1226,14 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "Swin-Adventure/1.0.0": {
+      "SwinAdventure/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/Swin-Adventure.dll": {}
+          "bin/placeholder/SwinAdventure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Swin-Adventure.dll": {}
+          "bin/placeholder/SwinAdventure.dll": {}
         }
       }
     }
@@ -4624,18 +4624,18 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "Swin-Adventure/1.0.0": {
+    "SwinAdventure/1.0.0": {
       "type": "project",
-      "path": "../Swin-Adventure/Swin-Adventure.csproj",
-      "msbuildProject": "../Swin-Adventure/Swin-Adventure.csproj"
+      "path": "../SwinAdventure/SwinAdventure.csproj",
+      "msbuildProject": "../SwinAdventure/SwinAdventure.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
+    "net5.0": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1",
-      "Swin-Adventure >= 1.0.0"
+      "SwinAdventure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4644,27 +4644,27 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/IdentifiableObjectUnitTest/IdentifiableObjectUnitTest.csproj",
-      "projectName": "IdentifiableObjectUnitTest",
-      "projectPath": "/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/IdentifiableObjectUnitTest/IdentifiableObjectUnitTest.csproj",
+      "projectUniqueName": "/Users/gracetang/code_COS20007/Week-3/SwinAdventure/SwinAdventure/SwinAdventureTest/SwinAdventureTest.csproj",
+      "projectName": "SwinAdventureTest",
+      "projectPath": "/Users/gracetang/code_COS20007/Week-3/SwinAdventure/SwinAdventure/SwinAdventureTest/SwinAdventureTest.csproj",
       "packagesPath": "/Users/gracetang/.nuget/packages/",
-      "outputPath": "/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/IdentifiableObjectUnitTest/obj/",
+      "outputPath": "/Users/gracetang/code_COS20007/Week-3/SwinAdventure/SwinAdventure/SwinAdventureTest/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/gracetang/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/Swin-Adventure.csproj": {
-              "projectPath": "/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/Swin-Adventure/Swin-Adventure.csproj"
+            "/Users/gracetang/code_COS20007/Week-3/SwinAdventure/SwinAdventure/SwinAdventure/SwinAdventure.csproj": {
+              "projectPath": "/Users/gracetang/code_COS20007/Week-3/SwinAdventure/SwinAdventure/SwinAdventure/SwinAdventure.csproj"
             }
           }
         }
@@ -4676,8 +4676,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",

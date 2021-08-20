@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k4Xd4ucB3ctpXvINsjFLSfXWlq3uC6y9e32Bd+Hw+2ogq1uHrxR9oIn7S4U1VO+xnsynaYVkiQUjShj9E9tcLQ==",
+  "dgSpecHash": "7C7Se+cvjAs6je7slv0zvChVsvXBObVhtUBvOSgnu91D3kLGLYB3/dICK9KzLEwp6lpyUVBTdaDy0H7rhParDg==",
   "success": true,
-  "projectFilePath": "/Users/gracetang/code_COS20007/Week-3/Swin-Adventure/IdentifiableObjectUnitTest/IdentifiableObjectUnitTest.csproj",
+  "projectFilePath": "/Users/gracetang/code_COS20007/Week-3/SwinAdventure/SwinAdventure/SwinAdventureTest/SwinAdventureTest.csproj",
   "expectedPackageFiles": [
     "/Users/gracetang/.nuget/packages/microsoft.codecoverage/16.5.0/microsoft.codecoverage.16.5.0.nupkg.sha512",
     "/Users/gracetang/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",

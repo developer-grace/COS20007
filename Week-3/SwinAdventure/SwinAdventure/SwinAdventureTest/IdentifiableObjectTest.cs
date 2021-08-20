@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using Swin_Adventure;
 
-namespace Swin_Adventure 
+namespace Swin_Adventure
 {
     [TestFixture]
-    public class IdentifiableObjectTest 
+    public class IdentifiableObjectTest
     {
         private IdentifiableObject _testableObject;
         private string _testableString;
 
-        
+
         [SetUp]
         public void SetUp()
         {
