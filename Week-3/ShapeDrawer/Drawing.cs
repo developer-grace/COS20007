@@ -39,7 +39,6 @@ namespace ShapeDrawer
             _shapes.Add(shape);
         }
 
-        // TODO: Follow pseudocode in Step 15
         public void SelectShapesAt(Point2D select_pt)
         {
             foreach (Shape s in _shapes)
@@ -68,7 +67,22 @@ namespace ShapeDrawer
             get { return _shapes.Count; }
         }
 
-        
+        public List<Shape> SelectedShapes
+        {
+            get
+            {
+                List<Shape> result;
+                result = new List<Shape>();
+                foreach (Shape s in _shapes)
+                {
+                    if (s.Selected == true)
+                    {
+                        result.Add(s);
+                    }
+                }
+                return result;
+            }
+        }
 
     }
 }
