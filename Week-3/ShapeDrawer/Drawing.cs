@@ -36,6 +36,12 @@ namespace ShapeDrawer
             _shapes.Add(shape);
         }
 
+        public void DeleteShape(Shape shape)
+        {
+            // Adding a Shape Object to generic List, which is Drawing
+            _shapes.Remove(shape);
+        }
+
         public void SelectShapesAt(Point2D select_pt)
         {
             foreach (Shape s in _shapes)
@@ -84,5 +90,6 @@ namespace ShapeDrawer
             }
         }
 
+        
     }
 }

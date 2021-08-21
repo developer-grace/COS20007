@@ -41,16 +41,28 @@ namespace ShapeDrawer
                     myDrawing.SelectShapesAt(pt);
                 }
 
-                //if (SplashKit.KeyTyped(KeyCode.SpaceKey))
+                if (SplashKit.KeyTyped(KeyCode.SpaceKey))
+                {
+                    Shape new_shape;
+                    new_shape = new Shape();
+                    new_shape.X = SplashKit.MouseX();
+                    new_shape.Y = SplashKit.MouseY();
+
+                    // initialising local variable mousePosition for a Point2D datatype
+                    Point2D mousePosition = SplashKit.MousePosition();
+                    if (new_shape.IsAt(mousePosition))
+                    {
+                        myDrawing.Background = SplashKit.RandomRGBColor(255);
+                    }
+                }
+
+                //if (SplashKit.KeyTyped(KeyCode.BackspaceKey))
                 //{
-                //    Point2D mousePosition = SplashKit.MousePosition();
-                //    if (myShape.IsAt(mousePosition))
-                //    {
-                //        myDrawing.Background = SplashKit.RandomRGBColor(255);
-                //    }
+                //    // remove selected shapes (use SelectedShapes method)
+                //    myDrawing.DeleteShape(myDrawing.SelectedShapes);
                 //}
 
-                //myShape.Draw();
+
                 myDrawing.Draw();
 
                 SplashKit.RefreshScreen();
