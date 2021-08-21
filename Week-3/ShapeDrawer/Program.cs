@@ -41,19 +41,13 @@ namespace ShapeDrawer
                     myDrawing.SelectShapesAt(pt);
                 }
 
+                /**
+                 * Pressing space bar should change the color of the
+                 * shape underneath the cursor.
+                 */
                 if (SplashKit.KeyTyped(KeyCode.SpaceKey))
                 {
-                    Shape new_shape;
-                    new_shape = new Shape();
-                    new_shape.X = SplashKit.MouseX();
-                    new_shape.Y = SplashKit.MouseY();
-
-                    // initialising local variable mousePosition for a Point2D datatype
-                    Point2D mousePosition = SplashKit.MousePosition();
-                    if (new_shape.IsAt(mousePosition))
-                    {
-                        myDrawing.Background = SplashKit.RandomRGBColor(255);
-                    }
+                    myDrawing.ColorChange();
                 }
 
                 //if (SplashKit.KeyTyped(KeyCode.BackspaceKey))

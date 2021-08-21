@@ -56,6 +56,19 @@ namespace ShapeDrawer
             }
         }
 
+        public void ColorChange()
+        {
+            Point2D mousePosition = SplashKit.MousePosition();
+
+            foreach ( Shape shape in _shapes )
+            {
+                if (shape.IsAt(mousePosition))
+                {
+                    shape.Color = SplashKit.RandomRGBColor(255);
+                }
+            }
+        }
+
         public Color Background
         {
             get
