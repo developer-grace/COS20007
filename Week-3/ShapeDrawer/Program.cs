@@ -41,7 +41,7 @@ namespace ShapeDrawer
                     myDrawing.SelectShapesAt(pt);
                 }
 
-                /**
+                /*
                  * Pressing space bar should change the color of the
                  * shape underneath the cursor.
                  */
@@ -50,11 +50,11 @@ namespace ShapeDrawer
                     myDrawing.ColorChange();
                 }
 
-                //if (SplashKit.KeyTyped(KeyCode.BackspaceKey))
-                //{
-                //    // remove selected shapes (use SelectedShapes method)
-                //    myDrawing.DeleteShape(myDrawing.SelectedShapes);
-                //}
+                if (SplashKit.KeyTyped(KeyCode.BackspaceKey))
+                {
+                    // remove selected shapes (use SelectedShapes method)
+                    myDrawing.DeleteSelectedShape();
+                }
 
 
                 myDrawing.Draw();

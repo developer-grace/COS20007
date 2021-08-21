@@ -36,10 +36,15 @@ namespace ShapeDrawer
             _shapes.Add(shape);
         }
 
-        public void DeleteShape(Shape shape)
+        public void DeleteSelectedShape()
         {
-            // Adding a Shape Object to generic List, which is Drawing
-            _shapes.Remove(shape);
+            // Removing a Shape Object from the List, this should
+            // delete the shape off of the display
+
+            foreach (Shape s in this.SelectedShapes)
+            {
+                _shapes.Remove(s);
+            }
         }
 
         public void SelectShapesAt(Point2D select_pt)
