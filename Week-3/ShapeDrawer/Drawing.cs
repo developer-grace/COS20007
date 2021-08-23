@@ -36,15 +36,11 @@ namespace ShapeDrawer
             _shapes.Add(shape);
         }
 
-        public void DeleteSelectedShape()
+        public void DeleteShape(Shape s)
         {
             // Removing a Shape Object from the List, this should
             // delete the shape off of the display
-
-            foreach (Shape s in this.SelectedShapes)
-            {
-                _shapes.Remove(s);
-            }
+            _shapes.Remove(s);
         }
 
         public void SelectShapesAt(Point2D select_pt)

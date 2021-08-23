@@ -53,7 +53,10 @@ namespace ShapeDrawer
                 if (SplashKit.KeyTyped(KeyCode.BackspaceKey))
                 {
                     // remove selected shapes (use SelectedShapes method)
-                    myDrawing.DeleteSelectedShape();
+                    foreach (Shape s in myDrawing.SelectedShapes)
+                    {
+                        myDrawing.DeleteShape(s);
+                    }
                 }
 
 
