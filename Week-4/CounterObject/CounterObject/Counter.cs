@@ -12,6 +12,12 @@ namespace CounterTest
             _count = 0;
         }
 
+        public Counter(string name, int count)
+        {
+            _name = name;
+            _count = count;
+        }
+
         public void Increment()
         {
             _count = _count + 1;
@@ -40,6 +46,11 @@ namespace CounterTest
             {
                 return _count;
             }
+        }
+
+        public string toString()
+        {
+            return $"{_count}";
         }
     }
 }
