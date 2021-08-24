@@ -5,6 +5,12 @@ namespace ShapeDrawer
 {
     public class Program
     {
+        // Program uses ShapeKind to determine the type of shape user wants to add to Drawing
+        private enum ShapeKind
+        {
+            Rectangle,
+            Circle
+        }
         public static void Main()
         {
             new Window("Shape Drawer", 800, 600);
@@ -12,21 +18,47 @@ namespace ShapeDrawer
             // local variables
             Drawing myDrawing;
             myDrawing = new Drawing();
+            ShapeKind kindToAdd;
+            kindToAdd = ShapeKind.Circle;
 
             do // Event loop
             {
                 SplashKit.ProcessEvents();
                 SplashKit.ClearScreen();
 
+                if (SplashKit.KeyTyped(KeyCode.RKey))
+                {
+                    kindToAdd = ShapeKind.Rectangle;
+                }
+
+                if (SplashKit.KeyTyped(KeyCode.CKey))
+                {
+                    kindToAdd = ShapeKind.Circle;
+                }
+
                 if (SplashKit.MouseClicked(MouseButton.LeftButton) )
                 {
-                    MyRectangle newRect = new MyRectangle();
-                    newRect.X = SplashKit.MouseX();
-                    newRect.Y = SplashKit.MouseY();
+                    Shape new_shape;
 
-                    // add new Rectangle to the Drawing List Object
-                    myDrawing.AddShape(newRect);
+                    // TODO: get rid of duplicate codes
+                    // TODO: position the Shape independently of which kind of object it is
+
+                    if (kindToAdd == ShapeKind.Circle)
+                    {
+                        MyCircle newCircle = new MyCircle();
+                        newCircle.X = SplashKit.MouseX();
+                        newCircle.Y = SplashKit.MouseY();
+                        new_shape = newCircle;
+                    }
+                    else
+                    {
+                        MyRectangle newRect = new MyRectangle();
+                        newRect.X = SplashKit.MouseX();
+                        newRect.Y = SplashKit.MouseY();
+                        new_shape = newRect;
+                    }
                     
+                    myDrawing.AddShape(new_shape);
                 }
 
                 if (SplashKit.MouseClicked(MouseButton.RightButton))
