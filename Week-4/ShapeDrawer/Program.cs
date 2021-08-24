@@ -20,15 +20,12 @@ namespace ShapeDrawer
 
                 if (SplashKit.MouseClicked(MouseButton.LeftButton) )
                 {
-                    // initialising local variable new_shape for Shape Object
-                    Shape new_shape;
-                    new_shape = new Shape();
-                    new_shape.X = SplashKit.MouseX();
-                    new_shape.Y = SplashKit.MouseY();
+                    MyRectangle newRect = new MyRectangle();
+                    newRect.X = SplashKit.MouseX();
+                    newRect.Y = SplashKit.MouseY();
 
-                    // add new Shape Object to the Drawing List Object
-                    
-                    myDrawing.AddShape(new_shape);
+                    // add new Rectangle to the Drawing List Object
+                    myDrawing.AddShape(newRect);
                     
                 }
 
