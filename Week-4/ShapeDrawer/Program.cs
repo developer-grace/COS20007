@@ -40,24 +40,19 @@ namespace ShapeDrawer
                 {
                     Shape new_shape;
 
-                    // TODO: get rid of duplicate codes
-                    // TODO: position the Shape independently of which kind of object it is
-
                     if (kindToAdd == ShapeKind.Circle)
                     {
                         MyCircle newCircle = new MyCircle();
-                        newCircle.X = SplashKit.MouseX();
-                        newCircle.Y = SplashKit.MouseY();
                         new_shape = newCircle;
                     }
                     else
                     {
                         MyRectangle newRect = new MyRectangle();
-                        newRect.X = SplashKit.MouseX();
-                        newRect.Y = SplashKit.MouseY();
                         new_shape = newRect;
                     }
-                    
+
+                    new_shape.X = SplashKit.MouseX();
+                    new_shape.Y = SplashKit.MouseY();
                     myDrawing.AddShape(new_shape);
                 }
 
