@@ -77,7 +77,7 @@ namespace ShapeDrawer
             }
         }
 
-        public void Draw()
+        public virtual void Draw() // this method is made virtual so child classes can override it
         {
             SplashKit.FillRectangle(_color, _x, _y, _width, _height);
 
@@ -111,7 +111,7 @@ namespace ShapeDrawer
             }
         }
 
-        public void DrawOutline()
+        public virtual void DrawOutline()
         {
             SplashKit.DrawRectangle(Color.Black, _x - 2, _y - 2, 4 + _width, 4 + _height);
         }

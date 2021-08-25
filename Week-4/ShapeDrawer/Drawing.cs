@@ -19,7 +19,7 @@ namespace ShapeDrawer
         {
         }
 
-        public void Draw()
+        public void Draw() 
         {
             SplashKit.ClearScreen();
             foreach(Shape shape in _shapes)
