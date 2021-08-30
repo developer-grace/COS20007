@@ -4,3 +4,11 @@ Debug
 
 *.pdb
 *.dll
+
+# C sharp auto generated files
+*.assets.json
+*.assets.cache
+*.nuget.cache
+*.sln
+*.csproj
+*.csproj.*
