@@ -2,7 +2,8 @@
 using SplashKitSDK;
 namespace ShapeDrawer
 {
-    public class Shape
+    // Shape is now an abstract class
+    public abstract class Shape
     {
         private float _x, _y;
         private Color _color;
@@ -51,17 +52,13 @@ namespace ShapeDrawer
             { _selected = value; }
         }
 
-        public virtual void Draw() // this method is made virtual so child classes can override it
-        {
-        }
 
-        public virtual bool IsAt(Point2D pt)
-        {
-            return false;
-        }
 
-        public virtual void DrawOutline()
-        {
-        }
+        // Draw is an abstract method - only children classes of Shape know how to implement it
+        public abstract void Draw();
+        
+        public abstract bool IsAt(Point2D pt);
+
+        public abstract void DrawOutline();
     }
 }
