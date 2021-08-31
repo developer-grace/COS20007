@@ -50,7 +50,7 @@ namespace CounterTest
 
         public override string ToString()
         {
-            return $"{_count}";
+            return _count.ToString("D2");
         }
     }
 }
