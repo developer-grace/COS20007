@@ -55,7 +55,7 @@ namespace CounterTest
             _seconds = new Counter("seconds", int.Parse(array[2]));
         }
 
-        public string toString()
+        public override string ToString()
         {
             return $"{_hours}:{_minutes}:{_seconds}";
         }
@@ -66,6 +66,25 @@ namespace CounterTest
             {
                 return _name;
             }
+        }
+
+        public Counter Hours
+        {
+            get
+            { return _hours; }
+            set { _hours = value; }
+        }
+        public Counter Minutes
+        {
+            get
+            { return _minutes; }
+            set { _minutes = value; }
+        }
+        public Counter Seconds
+        {
+            get
+            { return _seconds; }
+            set { _seconds = value; }
         }
     }
 }

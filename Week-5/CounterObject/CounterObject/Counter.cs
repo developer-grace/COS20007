@@ -48,7 +48,7 @@ namespace CounterTest
             }
         }
 
-        public string toString()
+        public override string ToString()
         {
             return $"{_count}";
         }
