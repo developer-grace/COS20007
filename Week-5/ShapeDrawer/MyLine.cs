@@ -2,15 +2,15 @@
 using SplashKitSDK;
 namespace ShapeDrawer
 {
-    public class MyLine : Shape 
+    public class MyLine : Shape // MyLine inherits attributes from Shape class
     {
-        private int _length;
-        public MyLine(Color clr) : base (clr)
+        private float _endX, _endY;
+        public MyLine(Color clr, float startX, float startY, float endX, float endY) : base (clr)
         {
-            _length = 150;
+            X = startX; Y = startY; EndX = endX; EndY = endY;
         }
 
-        public MyLine() : this(Color.Black)
+        public MyLine() : this(Color.Black, 20, 20, 200, 200)
         {
 
         }
@@ -19,7 +19,7 @@ namespace ShapeDrawer
         {
             if (Selected)
                 DrawOutline();
-            
+            SplashKit.DrawLine(Color, X, Y, EndX, EndY);
         }
 
         public override void DrawOutline()
@@ -29,13 +29,20 @@ namespace ShapeDrawer
 
         public override bool IsAt(Point2D pt)
         {
-            throw new NotImplementedException();
+            SplashKit.PointOnLine(pt, );
+
         }
 
-        public int Length
+        public float EndX
         {
-            get { return _length; }
-            set { _length = value; }
+            get { return _endX; }
+            set { _endX = value; }
+        }
+
+        public float EndY
+        {
+            get { return _endY; }
+            set { _endY = value; }
         }
     }
 }
