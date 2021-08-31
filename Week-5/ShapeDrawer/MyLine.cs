@@ -29,7 +29,7 @@ namespace ShapeDrawer
 
         public override bool IsAt(Point2D pt)
         {
-            SplashKit.PointOnLine(pt, );
+            return SplashKit.PointOnLine(pt, SplashKit.LineFrom(X, Y, _endX, _endY));
 
         }
 
