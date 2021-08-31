@@ -8,9 +8,13 @@ namespace CounterTest
         {
             foreach (Counter c in counters)
             {
-
                 Console.WriteLine("{0} is {1}", c.Name, c.Ticks);
             }
+        }
+
+        private static void PrintTime(Clock myClock)
+        {
+            Console.WriteLine("The time is {0} according to {1}", myClock.toString(), myClock.Name);
         }
 
         public static void Main(string[] args)
@@ -33,6 +37,18 @@ namespace CounterTest
             PrintCounters(myCounters);
             myCounters[2].Reset();
             PrintCounters(myCounters);
+
+            Clock myClock = new Clock();
+            Console.WriteLine("A clock is created");
+            PrintTime(myClock);
+            myClock.Tick();
+            PrintTime(myClock);
+            Console.WriteLine("Now the time will be set to 23:59:59");
+            myClock.SetTime("23:59:59");
+            myClock.Tick();
+            PrintTime(myClock);
+            myClock.Tick();
+            PrintTime(myClock);
         }
     }
 }
