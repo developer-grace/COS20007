@@ -8,7 +8,7 @@ namespace CounterTest
         private Counter _seconds;
         private string _name;
 
-        public Clock() : this("Unnamed Clock")
+        public Clock() : this("This Ol' Clock")
         {
         }
 
@@ -66,25 +66,6 @@ namespace CounterTest
             {
                 return _name;
             }
-        }
-
-        public Counter Hours
-        {
-            get
-            { return _hours; }
-            set { _hours = value; }
-        }
-        public Counter Minutes
-        {
-            get
-            { return _minutes; }
-            set { _minutes = value; }
-        }
-        public Counter Seconds
-        {
-            get
-            { return _seconds; }
-            set { _seconds = value; }
         }
     }
 }
