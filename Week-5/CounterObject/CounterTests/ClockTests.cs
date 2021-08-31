@@ -28,25 +28,25 @@ namespace ClockTests
         public void TestTime()
         {
             _testableClock.SetTime(_testableTime);
-            Assert.AreEqual(_testableTime, _testableClock.toString());
+            Assert.AreEqual(_testableTime, _testableClock.ToString());
         }
 
         [Test]
         public void TestReset()
         {
-            Assert.AreEqual("00:00:00", _testableClock.toString());
+            Assert.AreEqual("00:00:00", _testableClock.ToString());
         }
 
         [Test]
         public void TestTick()
         {
-            Assert.AreEqual("00:00:00", _testableClock.toString());
+            Assert.AreEqual("00:00:00", _testableClock.ToString());
             _testableClock.Tick();
-            Assert.AreEqual("00:00:01", _testableClock.toString());
+            Assert.AreEqual("00:00:01", _testableClock.ToString());
             _testableClock.Tick();
-            Assert.AreEqual("00:00:02", _testableClock.toString());
+            Assert.AreEqual("00:00:02", _testableClock.ToString());
             _testableClock.Tick();
-            Assert.AreEqual("00:00:03", _testableClock.toString());
+            Assert.AreEqual("00:00:03", _testableClock.ToString());
         }
 
 
@@ -57,13 +57,13 @@ namespace ClockTests
             {
                 _testableClock.Tick();
             }
-            Assert.AreEqual("00:02:03", _testableClock.toString());
+            Assert.AreEqual("00:02:03", _testableClock.ToString());
 
             for (int i = 0; i < 3600; i++)
             {
                 _testableClock.Tick();
             }
-            Assert.AreEqual("01:02:03", _testableClock.toString());
+            Assert.AreEqual("01:02:03", _testableClock.ToString());
 
             Assert.Pass();
         }
@@ -73,9 +73,9 @@ namespace ClockTests
         {
             _testableClock.SetTime("23:59:59");
             _testableClock.Tick();
-            Assert.AreEqual("00:00:00", _testableClock.toString());
+            Assert.AreEqual("00:00:00", _testableClock.ToString());
             _testableClock.Tick();
-            Assert.AreEqual("00:00:01", _testableClock.toString());
+            Assert.AreEqual("00:00:01", _testableClock.ToString());
         }
 
 
