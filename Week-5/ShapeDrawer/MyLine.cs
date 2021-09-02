@@ -31,7 +31,7 @@ namespace ShapeDrawer
         public override bool IsAt(Point2D pt)
         {
             return SplashKit.PointOnLine(pt, SplashKit.LineFrom(X, Y, _endX, _endY));
-
+            // The LineFrom method returns a Circle type, which makes it a suitable parameter to be passed in to PointOnLine method - which wants a Point2D and Circle parameter
         }
 
         public float EndX

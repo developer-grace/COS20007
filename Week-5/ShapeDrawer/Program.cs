@@ -28,35 +28,27 @@ namespace ShapeDrawer
                 SplashKit.ClearScreen();
 
                 if (SplashKit.KeyTyped(KeyCode.RKey))
-                {
-                    kindToAdd = ShapeKind.Rectangle;
-                }
+                { kindToAdd = ShapeKind.Rectangle; }
 
                 if (SplashKit.KeyTyped(KeyCode.CKey))
-                {
-                    kindToAdd = ShapeKind.Circle;
-                }
+                { kindToAdd = ShapeKind.Circle; }
 
                 if (SplashKit.KeyTyped(KeyCode.LKey))
-                {
-                    kindToAdd = ShapeKind.Line;
-                }
+                { kindToAdd = ShapeKind.Line; }
 
                 if (SplashKit.MouseClicked(MouseButton.LeftButton) )
                 {
                     Shape new_shape;
-
-                    // TODO: Turn this into a switch statement
                     if (kindToAdd == ShapeKind.Circle)
                     {
                         MyCircle newCircle = new MyCircle();
                         new_shape = newCircle;
                     }
-                    //else if (kindToAdd == ShapeKind.Rectangle)
-                    //{
-                    //    MyRectangle newRect = new MyRectangle();
-                    //    new_shape = newRect;
-                    //}
+                    else if (kindToAdd == ShapeKind.Rectangle)
+                    {
+                        MyRectangle newRect = new MyRectangle();
+                        new_shape = newRect;
+                    }
                     else
                     {
                         MyLine newLine = new MyLine();
@@ -97,7 +89,6 @@ namespace ShapeDrawer
 
 
                 myDrawing.Draw();
-
                 SplashKit.RefreshScreen();
             } while (!SplashKit.WindowCloseRequested("Shape Drawer"));
         }
