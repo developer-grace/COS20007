@@ -11,6 +11,9 @@ namespace ShapeDrawer
         private Color _background;
         private StreamWriter _writer;
         private Shape _s;
+        private StreamReader _reader;
+        private int _count;
+        private string _kind;
 
         public Drawing(Color background)
         {
@@ -84,6 +87,35 @@ namespace ShapeDrawer
                 s.SaveTo(_writer);
             }
             _writer.Close();
+        }
+
+        public void Load(string filename)
+        {
+            _reader = new StreamReader(filename);
+            Background = _reader.ReadColor();
+            _count = _reader.ReadInteger();
+            _shapes.Clear();
+
+            for (int i = 0; i < _count; i++)
+            {
+                _kind = _reader.ReadLine();
+
+                Console.WriteLine(_kind);
+
+                if (_kind == "Rectangle")
+                {
+                    _s = new MyRectangle();
+                }
+                else if (_kind == "Circle")
+                {
+                    _s = new MyCircle();
+                }
+                else continue;
+
+                _s.LoadFrom(_reader);
+                AddShape(_s);
+            }
+            _reader.Close();
         }
 
         public Color Background

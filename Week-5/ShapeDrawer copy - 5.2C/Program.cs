@@ -42,6 +42,11 @@ namespace ShapeDrawer
                     myDrawing.Save("/Users/gracetang/Desktop/TestDrawing.txt");
                 }
 
+                if (SplashKit.KeyTyped(KeyCode.OKey))
+                {
+                    myDrawing.Load("/Users/gracetang/Desktop/TestDrawing.txt");
+                }
+
                 if (SplashKit.MouseClicked(MouseButton.LeftButton) )
                 {
                     Shape new_shape;

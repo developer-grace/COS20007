@@ -46,6 +46,15 @@ namespace ShapeDrawer
             writer.WriteLine(EndY);
         }
 
+        public override void LoadFrom(StreamReader reader)
+        {
+            base.LoadFrom(reader);
+            X = reader.ReadInteger();
+            Y = reader.ReadInteger();
+            EndX = reader.ReadInteger();
+            EndY = reader.ReadInteger();
+        }
+
         public float EndX
         {
             get { return _endX; }
