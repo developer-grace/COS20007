@@ -1,5 +1,7 @@
 ﻿using System;
 using SplashKitSDK;
+using System.IO;
+
 namespace ShapeDrawer
 {
     // Shape is now an abstract class
@@ -60,5 +62,14 @@ namespace ShapeDrawer
         public abstract bool IsAt(Point2D pt);
 
         public abstract void DrawOutline();
+
+        // SaveTo is a virtual method which uses the System.IO namespace
+        public virtual void SaveTo(StreamWriter writer)
+        {
+            writer.WriteColor(Color);
+            writer.WriteLine(X);
+            writer.WriteLine(Y);
+        }
+
     }
 }

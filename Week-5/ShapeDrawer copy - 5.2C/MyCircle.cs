@@ -1,5 +1,7 @@
 ﻿using System;
 using SplashKitSDK;
+using System.IO;
+
 namespace ShapeDrawer
 {
     public class MyCircle : Shape // MyCircle inherits attributes from Shape class
@@ -29,6 +31,15 @@ namespace ShapeDrawer
         public override bool IsAt(Point2D pt)
         {
             return SplashKit.PointInCircle(pt, SplashKit.CircleAt(X, Y, _radius));
+        }
+
+        public override void SaveTo(StreamWriter writer)
+        {
+            writer.WriteLine("Circle");
+            base.SaveTo(writer);
+            writer.WriteLine(X);
+            writer.WriteLine(Y);
+            writer.WriteLine(Radius);
         }
 
         public int Radius

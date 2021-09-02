@@ -1,6 +1,7 @@
 ﻿using System;
 using SplashKitSDK;
 using System.Collections.Generic;
+using System.IO;
 
 namespace ShapeDrawer
 {
@@ -8,6 +9,8 @@ namespace ShapeDrawer
     {
         private readonly List<Shape> _shapes;
         private Color _background;
+        private StreamWriter _writer;
+        private Shape _s;
 
         public Drawing(Color background)
         {
@@ -68,6 +71,19 @@ namespace ShapeDrawer
                     shape.Color = SplashKit.RandomRGBColor(255);
                 }
             }
+        }
+
+        public void Save(string filename)
+        {
+            _writer = new StreamWriter(filename);
+            _writer.WriteColor(Background);
+            _writer.WriteLine(ShapeCount);
+
+            foreach (Shape s in _shapes)
+            {
+                s.SaveTo(_writer);
+            }
+            _writer.Close();
         }
 
         public Color Background

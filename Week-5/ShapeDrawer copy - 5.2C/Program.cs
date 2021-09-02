@@ -1,5 +1,6 @@
 using System;
 using SplashKitSDK;
+using System.IO;
 
 namespace ShapeDrawer
 {
@@ -35,6 +36,11 @@ namespace ShapeDrawer
 
                 if (SplashKit.KeyTyped(KeyCode.LKey))
                 { kindToAdd = ShapeKind.Line; }
+
+                if (SplashKit.KeyTyped(KeyCode.SKey))
+                {
+                    myDrawing.Save("/Users/gracetang/Desktop/TestDrawing.txt");
+                }
 
                 if (SplashKit.MouseClicked(MouseButton.LeftButton) )
                 {

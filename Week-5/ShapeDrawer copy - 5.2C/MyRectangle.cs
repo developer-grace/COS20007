@@ -1,5 +1,7 @@
 ﻿using System;
 using SplashKitSDK;
+using System.IO;
+
 namespace ShapeDrawer
 {
     public class MyRectangle : Shape // MyRectangle inherits attributes from Shape class
@@ -39,6 +41,16 @@ namespace ShapeDrawer
             }
             return false;
         }
+
+        // SaveTo is a method that uses the System.IO namespace
+        public override void SaveTo(StreamWriter writer)
+        {
+            writer.WriteLine("Rectangle");
+            base.SaveTo(writer);
+            writer.WriteLine(Width);
+            writer.WriteLine(Height);
+        }
+
 
         public int Width
         {
