@@ -9,11 +9,11 @@ namespace ShapeDrawer
     {
         private readonly List<Shape> _shapes;
         private Color _background;
-        private StreamWriter _writer;
-        private Shape _s;
-        private StreamReader _reader;
-        private int _count;
-        private string _kind;
+        private StreamWriter writer;
+        private Shape s;
+        private StreamReader reader;
+        private int count;
+        private string kind;
 
         public Drawing(Color background)
         {
@@ -78,44 +78,60 @@ namespace ShapeDrawer
 
         public void Save(string filename)
         {
-            _writer = new StreamWriter(filename);
-            _writer.WriteColor(Background);
-            _writer.WriteLine(ShapeCount);
+            writer = new StreamWriter(filename);
+            writer.WriteColor(Background);
+            writer.WriteLine(ShapeCount);
 
-            foreach (Shape s in _shapes)
+            try
             {
-                s.SaveTo(_writer);
+                foreach (Shape s in _shapes)
+                {
+                    s.SaveTo(writer);
+                }
             }
-            _writer.Close();
+            finally
+            {
+                writer.Close();
+            }
         }
 
         public void Load(string filename)
         {
-            _reader = new StreamReader(filename);
-            Background = _reader.ReadColor();
-            _count = _reader.ReadInteger();
+            reader = new StreamReader(filename);
+            Background = reader.ReadColor();
+            count = reader.ReadInteger();
             _shapes.Clear();
 
-            for (int i = 0; i < _count; i++)
+            try
             {
-                _kind = _reader.ReadLine();
-
-                Console.WriteLine(_kind);
-
-                if (_kind == "Rectangle")
+                for (int i = 0; i < count; i++)
                 {
-                    _s = new MyRectangle();
-                }
-                else if (_kind == "Circle")
-                {
-                    _s = new MyCircle();
-                }
-                else continue;
+                    kind = reader.ReadLine();
+                    switch (kind)
+                    {
+                        case "Rectangle":
+                            s = new MyRectangle();
+                            break;
+                        case "Circle":
+                            s = new MyCircle();
+                            break;
+                        case "Line":
+                            s = new MyLine();
+                            break;
+                        default:
+                            throw new InvalidDataException("Unknown shape kind: " + kind);
+                    }
 
-                _s.LoadFrom(_reader);
-                AddShape(_s);
+                    s.LoadFrom(reader);
+                    AddShape(s);
+                }
             }
-            _reader.Close();
+
+            finally
+            {
+                reader.Close();
+            }
+            
         }
 
         public Color Background

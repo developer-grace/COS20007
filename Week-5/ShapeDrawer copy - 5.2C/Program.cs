@@ -44,7 +44,13 @@ namespace ShapeDrawer
 
                 if (SplashKit.KeyTyped(KeyCode.OKey))
                 {
-                    myDrawing.Load("/Users/gracetang/Desktop/TestDrawing.txt");
+                    try
+                    {
+                        myDrawing.Load("/Users/gracetang/Desktop/TestDrawing.txt");
+                    } catch (Exception e)
+                    {
+                        Console.Error.WriteLine("Error loading file: {0}", e.Message);
+                    }
                 }
 
                 if (SplashKit.MouseClicked(MouseButton.LeftButton) )
