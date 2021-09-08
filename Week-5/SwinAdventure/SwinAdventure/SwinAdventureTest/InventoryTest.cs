@@ -79,7 +79,9 @@ namespace SwinAdventureTest
         // The rows contain tab indented short descriptions of the items in the inventory
         public void TestItemList()
         {
-            Assert.AreEqual("Bucket\tbucket\nMop\tmop\nPaint Brush\tbrush", _testableInventory.ItemList);
+            Assert.AreEqual(@"Bucket (bucket)
+Mop (mop)
+Paint brush (brush)", _testableInventory.ItemList);
         }
     }
 }

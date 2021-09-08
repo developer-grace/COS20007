@@ -8,5 +8,11 @@ namespace SwinAdventure
         {
         }
 
+// We need this ToString() because we're going to use String.join() on a list of items later
+        public override string ToString()
+        {
+            return base.ShortDescription;
+        }
+
     }
 }

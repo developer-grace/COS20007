@@ -61,13 +61,10 @@ namespace SwinAdventure
 
             get
             {
-                string output = "";
-
-                foreach(Item item in _items)
-                {
-                    output += item.ShortDescription + "\n";
-                }
-                return output;
+// The "join" function is a feature common in all modern programming languages
+// In this case it is joining our list of items, with a '\n' between each item
+// Note that we need ToString() to work on the item
+                return String.Join("\n", _items);
             }
         }
     }
