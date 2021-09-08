@@ -55,9 +55,11 @@ namespace SwinAdventureTest
         // Returns items it has, and the item remains in the inventory
         public void TestFetchItem()
         {
-            // telling Inventory to Fetch the "mop" item
-            _testableInventory.Fetch("mop");
+            // Check that Fetch returns something after telling Inventory to Fetch the "mop" item
+            Assert.IsNotNull(_testableInventory.Fetch("mop"));
+
             // After Fetching the "mop" item, check that the "mop" is still in Inventory
+            Console.WriteLine(_testableInventory.HasItem("mop"));
             Assert.IsTrue(_testableInventory.HasItem("mop"));
 
         }
