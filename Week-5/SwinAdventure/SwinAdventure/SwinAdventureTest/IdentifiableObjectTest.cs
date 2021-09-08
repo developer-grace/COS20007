@@ -4,22 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Swin_Adventure;
+using SwinAdventure;
 
-namespace Swin_Adventure
+namespace SwinAdventure
 {
     [TestFixture]
     public class IdentifiableObjectTest
     {
         private IdentifiableObject _testableObject;
         private string _testableString;
+        private string[] _testableArray;
 
 
         [SetUp]
         public void SetUp()
         {
             _testableString = "Some string.";
-            _testableObject = new IdentifiableObject();
+            _testableObject = new IdentifiableObject(_testableArray);
             _testableObject.AddIdentifier(_testableString);
         }
 
