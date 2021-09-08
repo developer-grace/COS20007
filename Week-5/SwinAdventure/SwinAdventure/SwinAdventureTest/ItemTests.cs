@@ -12,24 +12,34 @@ namespace SwinAdventureTest
     public class ItemTests
     {
         private Item _testableItem;
-        private string[] _testStrings = new string[] { "Test string 1", "Test Item 2", "Test Item 3" };
-
-
 
         [SetUp]
         public void SetUp()
         {
-            _testableItem = new Item(_testStrings, "Test Item", "This is a test item");
+            _testableItem = new Item(new string[] { "shovel", "spade", "gardening tool" }, "Shovel", "A metal shovel with wooden handle");
         }
 
         [Test]
         public void TestIdentifiable()
         {
-            Assert.IsTrue(_testableItem.AreYou("Test string 1"));
-            Assert.IsTrue(_testableItem.AreYou("Test string 2"));
-            Assert.IsTrue(_testableItem.AreYou("Test string 3"));
-            Assert.IsFalse(_testableItem.AreYou("Test string 4"));
+            // Check that the item responds correctly to "AreYou" requests based on the identifiers it is created with
+            Assert.IsFalse(_testableItem.AreYou("sword"));
+            
+        }
 
+        [Test]
+        public void TestShortDescription()
+        {
+            // Check that the game object's short description returns the string "a name (first id)"
+            Assert.AreEqual("Shovel (shovel)", _testableItem.ShortDescription);
+
+        }
+
+        [Test]
+        public void TestFullDescription()
+        {
+            // Check that it returns the item's description
+            Assert.AreEqual("A metal shovel with wooden handle", _testableItem.FullDescription);
         }
     }
 }
