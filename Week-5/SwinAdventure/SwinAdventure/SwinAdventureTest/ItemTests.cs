@@ -11,11 +11,13 @@ namespace SwinAdventureTest
     [TestFixture]
     public class ItemTests
     {
+        // Private fields for this test goes here
         private Item _testableItem;
 
         [SetUp]
         public void SetUp()
         {
+            // Initialising the private fields, creating Objects in SetUp
             _testableItem = new Item(new string[] { "shovel", "spade", "gardening tool" }, "Shovel", "A metal shovel with wooden handle");
         }
 
