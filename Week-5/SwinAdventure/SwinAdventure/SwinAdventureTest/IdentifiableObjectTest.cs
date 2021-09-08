@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using SwinAdventure;
 
-namespace SwinAdventure
+namespace SwinAdventureTest
 {
     [TestFixture]
     public class IdentifiableObjectTest
