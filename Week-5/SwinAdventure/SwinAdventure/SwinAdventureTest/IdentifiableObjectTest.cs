@@ -20,6 +20,7 @@ namespace SwinAdventureTest
         public void SetUp()
         {
             _testableString = "Some string.";
+            _testableArray = new string[] { "some string." };
             _testableObject = new IdentifiableObject(_testableArray);
             _testableObject.AddIdentifier(_testableString);
         }
@@ -27,6 +28,8 @@ namespace SwinAdventureTest
         [Test]
         public void TestAreYou()
         {
+            // Check that it responds "True" to the "Are You" message
+            // where the request matches one of the object's identifiers.
             Assert.IsTrue(_testableObject.AreYou(_testableString));
         }
 
