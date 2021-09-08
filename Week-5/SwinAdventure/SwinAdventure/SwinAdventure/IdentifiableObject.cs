@@ -9,7 +9,10 @@ namespace SwinAdventure
 
         public IdentifiableObject(string[] idents) 
         {
+            // Initialising a new List of string types for _identifiers
             _identifiers = new List<string>();
+
+            // Adding an identifier to the List _identifier for each string id
             foreach (string id in idents)
             {
                 this.AddIdentifier(id);
