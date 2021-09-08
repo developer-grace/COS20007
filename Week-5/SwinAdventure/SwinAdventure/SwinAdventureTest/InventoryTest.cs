@@ -74,11 +74,12 @@ namespace SwinAdventureTest
         }
 
         [Test]
+        // TODO: Find out what is the expected output based on the requirements
         // Returns a list of strings with one row per item
         // The rows contain tab indented short descriptions of the items in the inventory
         public void TestItemList()
         {
-            Assert.AreEqual("", _testableInventory.ItemList);
+            Assert.AreEqual("Bucket\tbucket\nMop\tmop\nPaint Brush\tbrush", _testableInventory.ItemList);
         }
     }
 }

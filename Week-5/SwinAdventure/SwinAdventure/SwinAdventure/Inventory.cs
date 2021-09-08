@@ -58,7 +58,17 @@ namespace SwinAdventure
         // returns the list of Items in Inventory List
         public string ItemList
         {
-            get { return _items.ToString(); }
+
+            get
+            {
+                string output = "";
+
+                foreach(Item item in _items)
+                {
+                    output += item.ShortDescription + "\n";
+                }
+                return output;
+            }
         }
     }
 }
