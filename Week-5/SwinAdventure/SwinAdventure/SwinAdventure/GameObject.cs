@@ -20,9 +20,8 @@ namespace SwinAdventure
         // Short Description should return a short desc made up of name, and first id of the game object
         public string ShortDescription
         {
-            get {
-                return FirstId + " " + _name;
-            }
+            // $ and {} allows you to interpolate strings
+            get { return Name + $" ({FirstId})"; }
         }
 
         public virtual string FullDescription
