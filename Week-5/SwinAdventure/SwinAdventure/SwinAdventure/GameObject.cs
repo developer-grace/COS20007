@@ -5,11 +5,9 @@ namespace SwinAdventure
     {
         private string _name;
         private string _description;
-        private string[] _ids;
 
-        public GameObject(string[] ids, string name, string desc)
+        public GameObject(string[] ids, string name, string desc) : base(ids)
         {
-            _ids = ids;
             _name = name;
             _description = desc;
         }
@@ -23,7 +21,7 @@ namespace SwinAdventure
         public string ShortDescription
         {
             get {
-                return _name + " " + _ids[0];
+                return FirstId + " " + _name;
             }
         }
 

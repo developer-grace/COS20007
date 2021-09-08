@@ -7,17 +7,13 @@ namespace SwinAdventure
     {
         private List<string> _identifiers;
 
-        public IdentifiableObject(string[] idents) : this()
+        public IdentifiableObject(string[] idents) 
         {
+            _identifiers = new List<string>();
             foreach (string id in idents)
             {
                 this.AddIdentifier(id);
             }
-        }
-
-        public IdentifiableObject()
-        {
-            _identifiers = new List<string>();
         }
 
         public Boolean AreYou(string id)
