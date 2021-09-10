@@ -59,7 +59,6 @@ namespace SwinAdventureTest
             Assert.IsNotNull(_testableInventory.Fetch("mop"));
 
             // After Fetching the "mop" item, check that the "mop" is still in Inventory
-            Console.WriteLine(_testableInventory.HasItem("mop"));
             Assert.IsTrue(_testableInventory.HasItem("mop"));
 
         }

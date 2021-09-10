@@ -11,17 +11,22 @@ namespace SwinAdventure
 
         public GameObject Locate(string id)
         {
-            // checking if "id" is in the Player's Inventory
-            if (_inventory.HasItem(id))
+            if (AreYou(id)) // Are we trying to locate the Player itself?
             {
-                // if yes, ask if an Item is "id" and if it matches the 
-                // identifier we are looking for then fetch it and return it
-
-                return _inventory.Fetch(id);
+                return this;
             }
-
-            // otherwise return nothing
-            return null;
+            // If not, check if what we're looking for is in the Player's Inventory
+            else if (_inventory.HasItem(id))
+            {
+                // If yes, ask if an Item is "id" and if it matches the 
+                // identifier we are looking for then return it
+                return this;
+            }
+            else
+            {
+                // otherwise return nothing
+                return null;
+            }
         }
 
         public override string FullDescription

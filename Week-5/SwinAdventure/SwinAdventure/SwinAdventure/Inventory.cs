@@ -17,7 +17,6 @@ namespace SwinAdventure
         // In OOP, the items should identify themselves and you shouldn't know their inner workings.
         public bool HasItem(string id)
         {
-
             foreach (Item item in _items)
             {
                 if (item.AreYou(id))
@@ -38,9 +37,6 @@ namespace SwinAdventure
         // id can be the name or one of the idents
         public Item Take(string id)
         {
-            // foreach is probably the tool to start with here.
-            //Item myItem = _items.Find(x => x.Name.Equals(id));
-            // TODO: Try rewriting this line below
             Item myItem = this.Fetch(id);
             _items.Remove(myItem);
             return myItem;
@@ -50,6 +46,10 @@ namespace SwinAdventure
         // id can be the name or one of the idents
         public Item Fetch(string id)
         {
+
+            // foreach is probably the tool to start with here.
+            //Item myItem = _items.Find(x => x.Name.Equals(id));
+            // TODO: Try rewriting this line below
             Item myItem = _items.Find(x => x.AreYou(id) || x.Name.Equals(id));
             return myItem;
         }
