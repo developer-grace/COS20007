@@ -79,6 +79,9 @@ namespace SwinAdventureTest
         // The rows contain tab indented short descriptions of the items in the inventory
         public void TestItemList()
         {
+
+            // Use a string literal so that the expected input can be multiline
+            // @"blah" is a string literal
             Assert.AreEqual(@"Bucket (bucket)
 Mop (mop)
 Paint brush (brush)", _testableInventory.ItemList);
