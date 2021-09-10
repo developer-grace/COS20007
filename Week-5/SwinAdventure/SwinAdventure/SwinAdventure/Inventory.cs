@@ -11,7 +11,6 @@ namespace SwinAdventure
             _items = new List<Item>();
         }
 
-
         // To check if your inventory has an item
         // You must iterate over your list of items
         // and check if any of the items has the same ID as the one you're looking for.
@@ -58,12 +57,11 @@ namespace SwinAdventure
         // returns the list of Items in Inventory List
         public string ItemList
         {
-
             get
             {
-// The "join" function is a feature common in all modern programming languages
-// In this case it is joining our list of items, with a '\n' between each item
-// Note that we need ToString() to work on the item
+                // The "join" function is a feature common in all modern programming languages
+                // In this case it is joining our list of items, with a '\n' between each item
+                // Note that we need ToString() to work on the item
                 return String.Join("\n", _items);
             }
         }

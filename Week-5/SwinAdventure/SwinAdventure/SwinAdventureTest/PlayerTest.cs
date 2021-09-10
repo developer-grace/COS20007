@@ -8,16 +8,32 @@ using SwinAdventure;
 
 namespace SwinAdventureTest
 {
-    // Private fields for this test goes here
-
-
     [TestFixture]
     public class PlayerTest
     {
+        // Private fields for this test goes here
+        private Player _testablePlayer;
+        private Item _testItem1;
+        private Item _testItem2;
+        private Item _testItem3;
+        private Inventory _testableInventory;
+
         [SetUp]
         public void SetUp()
         {
+            // Initialising a Player and its Inventory
+            _testablePlayer = new Player("Link", "A hero");
+            _testableInventory = new Inventory();
 
+            // Initialising Item objects
+            _testItem1 = new Item(new string[] { "bucket", "pail" }, "Bucket", "A plastic bucket");
+            _testItem2 = new Item(new string[] { "mop" }, "Mop", "A mop with wooden handle");
+            _testItem3 = new Item(new string[] { "brush", "paint", "paintbrush" }, "Paint brush", "A small paint brush");
+
+            // Adding the items into Inventory
+            _testableInventory.Put(_testItem1);
+            _testableInventory.Put(_testItem2);
+            _testableInventory.Put(_testItem3);
         }
 
         [Test]
@@ -25,7 +41,8 @@ namespace SwinAdventureTest
         // its default identifiers (me and inventory)
         public void TestIdentifiable()
         {
-
+            Assert.IsTrue(_testablePlayer.AreYou("me"));
+            Assert.IsTrue(_testablePlayer.AreYou("inventory"));
         }
 
         [Test]
