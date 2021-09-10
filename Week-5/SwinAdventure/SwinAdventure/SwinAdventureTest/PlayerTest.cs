@@ -57,7 +57,9 @@ namespace SwinAdventureTest
         // Test that player returns itself if asked to locate "me" or "inventory"
         public void TestLocatePlayer()
         {
-
+            // Asking the Player to locate itself, making sure it returns itself
+            Assert.AreEqual(_testablePlayer, _testablePlayer.Locate("me"));
+            Assert.AreEqual(_testablePlayer, _testablePlayer.Locate("inventory"));
         }
 
         [Test]
@@ -65,7 +67,7 @@ namespace SwinAdventureTest
         // it does not have
         public void TestLocateNothing()
         {
-
+            Assert.IsNull(_testablePlayer.Locate("nonexistent item"));
         }
 
         [Test]
@@ -74,7 +76,9 @@ namespace SwinAdventureTest
         // (from its inventory's item list)
         public void TestFullDescription()
         {
-
+            Assert.AreEqual(@"Bucket (bucket)
+Mop (mop)
+Paint brush (brush)", _testableInventory.ItemList);
         }
     }
 }
