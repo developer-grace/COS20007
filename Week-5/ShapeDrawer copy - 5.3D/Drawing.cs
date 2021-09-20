@@ -10,7 +10,7 @@ namespace ShapeDrawer
         private readonly List<Shape> _shapes;
         private Color _background;
         private StreamWriter writer;
-        private Shape s;
+        //private Shape s;
         private StreamReader reader;
         private int count;
         private string kind;
@@ -101,27 +101,14 @@ namespace ShapeDrawer
             Background = reader.ReadColor();
             count = reader.ReadInteger();
             _shapes.Clear();
+            Shape s;
 
             try
             {
                 for (int i = 0; i < count; i++)
                 {
                     kind = reader.ReadLine();
-                    switch (kind)
-                    {
-                        case "Rectangle":
-                            s = new MyRectangle();
-                            break;
-                        case "Circle":
-                            s = new MyCircle();
-                            break;
-                        case "Line":
-                            s = new MyLine();
-                            break;
-                        default:
-                            throw new InvalidDataException("Unknown shape kind: " + kind);
-                    }
-
+                    s = Shape.CreateShape(kind);
                     s.LoadFrom(reader);
                     AddShape(s);
                 }
