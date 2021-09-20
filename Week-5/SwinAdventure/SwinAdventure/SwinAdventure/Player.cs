@@ -7,6 +7,7 @@ namespace SwinAdventure
 
         public Player(string name, string desc) : base(new string[] {"me", "inventory"}, name, desc)
         {
+            _inventory = new Inventory();
         }
 
         public GameObject Locate(string id)
