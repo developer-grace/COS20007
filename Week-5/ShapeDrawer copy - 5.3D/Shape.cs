@@ -1,12 +1,26 @@
 ﻿using System;
 using SplashKitSDK;
 using System.IO;
+using System.Collections.Generic;
 
 namespace ShapeDrawer
 {
     // Shape is now an abstract class
     public abstract class Shape
     {
+        private static Dictionary<string, Type> _ShapeClassRegistry = new Dictionary<string, Type>();
+
+        public static void RegisterShape(string name, Type t)
+        {
+            _ShapeClassRegistry[name] = t;
+        }
+
+        public static Shape CreateShape(string name)
+        {
+            return (Shape)Activator.CreateInstance(_ShapeClassRegistry[name]);
+        }
+
+
         private float _x, _y;
         private Color _color;
         private bool _selected;
