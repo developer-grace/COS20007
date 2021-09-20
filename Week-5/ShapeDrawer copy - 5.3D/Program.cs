@@ -15,6 +15,10 @@ namespace ShapeDrawer
         }
         public static void Main()
         {
+            Shape.RegisterShape("Rectangle", typeof(MyRectangle));
+            Shape.RegisterShape("Circle", typeof(MyCircle));
+            Shape.RegisterShape("Line", typeof(MyLine));
+
             new Window("Shape Drawer", 800, 600);
 
             // local variables
