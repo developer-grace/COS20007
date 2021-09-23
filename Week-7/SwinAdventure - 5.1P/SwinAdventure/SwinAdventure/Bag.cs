@@ -42,7 +42,7 @@ namespace SwinAdventure
         {
             get
             {
-                return Inventory;
+                return _inventory;
             }
         }
     }
