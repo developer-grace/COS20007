@@ -16,12 +16,12 @@ namespace SwinAdventure
             {
                 return this;
             }
-            // If not, check if what we're looking for is in the Bag
+            // If not, check if what we're looking for is in the Bag Inventory
             else if (_inventory.HasItem(id))
             {
                 // If yes, ask if an Item is "id" and if it matches the 
-                // identifier we are looking for then return it
-                return this;
+                // identifier we are looking for then return the item
+                return _inventory.Fetch(id);
             }
             else
             {
@@ -34,7 +34,7 @@ namespace SwinAdventure
         {
             get
             {
-                return "In the Bag you can see: " + ShortDescription;
+                return "In the " + Name + " you can see: " + Inventory.ItemList;
             }
         }
 
