@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace SwinAdventure
 {
-    public class Bag : Item
+    public class Bag : Item, IHaveInventory
     {
         private Inventory _inventory;
         public Bag(string[] ids, string name, string desc) : base(ids, name, desc)

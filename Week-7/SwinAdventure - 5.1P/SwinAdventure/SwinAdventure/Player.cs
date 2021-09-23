@@ -1,7 +1,7 @@
 ﻿using System;
 namespace SwinAdventure
 {
-    public class Player : GameObject
+    public class Player : GameObject, IHaveInventory
     {
         private Inventory _inventory;
 
@@ -10,7 +10,7 @@ namespace SwinAdventure
             _inventory = new Inventory();
         }
 
-        public GameObject Locate(string id)
+        public GameObject Locate(string id) 
         {
             if (AreYou(id)) // Are we trying to locate the Player itself?
             {
