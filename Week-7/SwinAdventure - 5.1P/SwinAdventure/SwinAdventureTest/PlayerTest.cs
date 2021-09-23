@@ -16,14 +16,12 @@ namespace SwinAdventureTest
         private Item _testItem1;
         private Item _testItem2;
         private Item _testItem3;
-        private Inventory _testableInventory;
 
         [SetUp]
         public void SetUp()
         {
-            // Initialising a Player and its Inventory
+            // Initialising a Player
             _testablePlayer = new Player("Link", "A hero");
-            _testableInventory = new Inventory();
 
             // Initialising Item objects
             _testItem1 = new Item(new string[] { "bucket", "pail" }, "Bucket", "A plastic bucket");
@@ -31,9 +29,9 @@ namespace SwinAdventureTest
             _testItem3 = new Item(new string[] { "brush", "paint", "paintbrush" }, "Paint brush", "A small paint brush");
 
             // Adding the items into Inventory
-            _testableInventory.Put(_testItem1);
-            _testableInventory.Put(_testItem2);
-            _testableInventory.Put(_testItem3);
+            _testablePlayer.Inventory.Put(_testItem1);
+            _testablePlayer.Inventory.Put(_testItem2);
+            _testablePlayer.Inventory.Put(_testItem3);
         }
 
         [Test]
@@ -53,7 +51,7 @@ namespace SwinAdventureTest
             // Asking the Player to locate "mop"
             _testablePlayer.Locate("mop");
             // Checking that "mop" is still in the player's inventory
-            Assert.IsTrue(_testableInventory.HasItem("mop"));
+            Assert.IsTrue(_testablePlayer.Inventory.HasItem("mop"));
         }
 
         [Test]
@@ -84,7 +82,7 @@ namespace SwinAdventureTest
         {
             Assert.AreEqual(@"Bucket (bucket)
 Mop (mop)
-Paint brush (brush)", _testableInventory.ItemList);
+Paint brush (brush)", _testablePlayer.Inventory.ItemList);
         }
     }
 }
