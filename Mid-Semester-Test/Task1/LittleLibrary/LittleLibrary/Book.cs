@@ -7,6 +7,8 @@ namespace LittleLibrary
         private string _isbn;
         public Book(string name, string author, string isbn) : base(name, author, isbn)
         {
+            _author = author;
+            _isbn = isbn;
         }
 
         public string Author

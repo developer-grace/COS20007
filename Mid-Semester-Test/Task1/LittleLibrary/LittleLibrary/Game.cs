@@ -6,6 +6,7 @@ namespace LittleLibrary
         private string _developer;
         public Game(string name, string developer, string rating) : base(name, developer, rating)
         {
+            _developer = developer;
         }
 
         public string Developer
