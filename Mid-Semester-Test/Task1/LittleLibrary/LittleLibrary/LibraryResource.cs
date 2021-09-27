@@ -9,6 +9,7 @@ namespace LittleLibrary
         private bool _onloan;
         public LibraryResource(string name, string creator, string rating)
         {
+            _onloan = false;
         }
 
         public string Name
