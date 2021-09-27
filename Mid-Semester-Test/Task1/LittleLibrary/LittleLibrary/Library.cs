@@ -20,12 +20,22 @@ namespace LittleLibrary
         // AND if it's not on loan
         public bool HasResource(string name)
         {
-            LibraryResource resource = new LibraryResource();
+            Boolean TheBookHasBeenFoundAndIsntOut = false;
+            Console.WriteLine("Looking for this book: " + name);
 
-            if ( _resources.Contains(resource) && (resource.OnLoan = false) )
-            { return true; }
-            else
-            return false;
+            foreach (LibraryResource l in _resources)
+            {
+                Console.WriteLine("Looking for name in: " + l.Name);
+                Console.WriteLine("ON loan?" + l.OnLoan.ToString());
+                if (l.Name == name && !l.OnLoan)
+                {
+                    Console.WriteLine("Found the book! And it's not on loan");
+                    TheBookHasBeenFoundAndIsntOut = true;
+
+                }
+            }
+
+            return TheBookHasBeenFoundAndIsntOut;
         }
     }
 }
