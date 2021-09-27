@@ -7,6 +7,9 @@ namespace LittleLibrary
         private string _creator;
         private string _rating;
         private bool _onloan;
+
+        public LibraryResource() { }
+
         public LibraryResource(string name, string creator, string rating)
         {
             _name = name;
