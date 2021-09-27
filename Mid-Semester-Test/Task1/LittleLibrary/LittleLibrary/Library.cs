@@ -16,10 +16,15 @@ namespace LittleLibrary
             _resources.Add(resource);
         }
 
-        // checking if a LibraryResource exists, AND if it exists within
-        // the Library List
+        //returns true if a LibraryResource exists within the Library List,
+        // AND if it's not on loan
         public bool HasResource(string name)
         {
+            LibraryResource resource = new LibraryResource();
+
+            if ( _resources.Contains(resource) && (resource.OnLoan = false) )
+            { return true; }
+            else
             return false;
         }
     }
