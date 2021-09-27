@@ -21,20 +21,14 @@ namespace LittleLibrary
         public bool HasResource(string name)
         {
             Boolean TheBookHasBeenFoundAndIsntOut = false;
-            Console.WriteLine("Looking for this book: " + name);
 
             foreach (LibraryResource l in _resources)
             {
-                Console.WriteLine("Looking for name in: " + l.Name);
-                Console.WriteLine("ON loan?" + l.OnLoan.ToString());
                 if (l.Name == name && !l.OnLoan)
                 {
-                    Console.WriteLine("Found the book! And it's not on loan");
                     TheBookHasBeenFoundAndIsntOut = true;
-
                 }
             }
-
             return TheBookHasBeenFoundAndIsntOut;
         }
     }
