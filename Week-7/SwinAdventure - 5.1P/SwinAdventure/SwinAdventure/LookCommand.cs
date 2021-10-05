@@ -9,6 +9,8 @@ namespace SwinAdventure
 
         public override string Execute(Player p, string[] text)
         {
+            IHaveInventory container = p;
+
             if (text.Length == 3 || text.Length == 5)
             {
                 if (text[0] == "look")
@@ -19,32 +21,38 @@ namespace SwinAdventure
                         {
                             if (text[3] == "in")
                             {
-                                // the container id is the 5th word
+                                container = FetchContainer(p, text[4]);
+                                if(container == null)
+                                {
+                                    return "I can't find the " + text[4];
+                                }
                             }
                             else return "What do you want to look in?";
                         }
 
-                        if (text.Length == 3)
-                        {
-                            // tell LookCommand that the container is the player
-                        }
+                        return LookAtIn(text[2], container);
                     }
                     else return "What do you want to look at?";
                 }
                 else return "Error in look input";
 
             }
+
             return "I don't know how to look like that";
         }
 
         private IHaveInventory FetchContainer(Player p, string containerId)
         {
-            return null;
+            GameObject obj = p.Locate(containerId);
+            if(obj is IHaveInventory)
+            {
+                return (IHaveInventory)obj;
+            } else return null;
         }
 
         private string LookAtIn(string thingId, IHaveInventory container)
         {
-            return null;
+            return container.Locate(thingId).ToString();
         }
     }
 }
