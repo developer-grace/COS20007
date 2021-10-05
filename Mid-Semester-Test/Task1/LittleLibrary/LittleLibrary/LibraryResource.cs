@@ -23,11 +23,6 @@ namespace LittleLibrary
             get { return _name; }
         }
 
-        public string Creator
-        {
-            get { return _creator; }
-        }
-
         public string ContentRating
         {
             get { return _rating; }
