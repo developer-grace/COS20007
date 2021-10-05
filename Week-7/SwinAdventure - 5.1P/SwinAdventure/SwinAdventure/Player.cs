@@ -21,7 +21,7 @@ namespace SwinAdventure
             {
                 // If yes, ask if an Item is "id" and if it matches the 
                 // identifier we are looking for then return it
-                return this;
+                return _inventory.Fetch(id);
             }
             else
             {
@@ -29,6 +29,7 @@ namespace SwinAdventure
                 return null;
             }
         }
+
 
         public override string FullDescription
         {
