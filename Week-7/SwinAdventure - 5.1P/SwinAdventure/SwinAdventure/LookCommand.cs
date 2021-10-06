@@ -52,7 +52,12 @@ namespace SwinAdventure
 
         private string LookAtIn(string thingId, IHaveInventory container)
         {
-            return container.Locate(thingId).ToString();
+            GameObject item = container.Locate(thingId);
+            if(item == null)
+            {
+                return "I can't find the " + thingId;
+            }
+            return item.FullDescription;
         }
     }
 }

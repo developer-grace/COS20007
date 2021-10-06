@@ -5,5 +5,7 @@ namespace SwinAdventure
     {
         GameObject Locate(string id);
         string Name { get; }
+
+        //public Boolean AddItem(GameObject item);
     }
 }

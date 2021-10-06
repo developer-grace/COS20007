@@ -31,14 +31,19 @@ namespace SwinAdventure
         }
 
 
-        public override string FullDescription
+        public string InventoryDescription
         {
-            get { return "You are carrying: " + ShortDescription; }
+            get { return "You are carrying: " + _inventory; }
         }
 
         public Inventory Inventory
         {
             get { return _inventory; }
+        }
+
+        public override string ToString()
+        {
+            return base.FullDescription;
         }
     }
 }
