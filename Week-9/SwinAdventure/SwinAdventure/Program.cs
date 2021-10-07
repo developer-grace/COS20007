@@ -14,6 +14,7 @@ namespace SwinAdventure
             string playerDesc = Console.ReadLine();
 
             Player player = new Player(playerName, playerDesc);
+            Console.WriteLine("Player profile created. Welcome, " + playerName + ", " + playerDesc);
 
             Item gem = new Item(new string[] { "gem", "ruby" }, "gem", "A bright red gem");
             Item stick = new Item(new string[] { "stick" }, "stick", "A wooden stick");
@@ -26,9 +27,15 @@ namespace SwinAdventure
             Item glass = new Item(new string[] { "magnifying glass", "magnify", "glass", "zoom in" }, "magnifying glass", "A magnifying glass for adventurers");
             playerBag.Inventory.Put(glass);
 
+            Console.WriteLine("Player inventory created.");
+            Console.WriteLine("Now we can start looking for stuff! Type 'look at me' to try it.");
             string playerCommand = Console.ReadLine();
-            LookCommand look = new LookCommand(new string[] { "player" });
-            look.Execute(player, playerCommand.Split());
+
+            do
+            {
+                LookCommand look = new LookCommand(new string[] { "player" });
+                look.Execute(player, playerCommand.Split());
+            } while (playerCommand != "end program");
 
         }
     }
