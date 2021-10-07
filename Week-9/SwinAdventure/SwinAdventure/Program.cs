@@ -29,11 +29,14 @@ namespace SwinAdventure
 
             Console.WriteLine("Player inventory created.");
             Console.WriteLine("Now we can start looking for stuff! Type 'look at me' to try it.");
-            string playerCommand = Console.ReadLine();
+
+
+            string playerCommand;
+            LookCommand look = new LookCommand(new string[] { "player" });
 
             do
             {
-                LookCommand look = new LookCommand(new string[] { "player" });
+                playerCommand = Console.ReadLine();
                 look.Execute(player, playerCommand.Split());
             } while (playerCommand != "end program");
 
