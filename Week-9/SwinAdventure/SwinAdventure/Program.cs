@@ -21,10 +21,10 @@ namespace SwinAdventure
             player.Inventory.Put(gem);
             player.Inventory.Put(stick);
 
-            Bag playerBag = new Bag(new string[] { "bag", "player's bag", "knapsack" }, "your bag", "A bag");
+            Bag playerBag = new Bag(new string[] { "bag", "player's-bag", "knapsack" }, "your bag", "A bag");
             player.Inventory.Put(playerBag);
 
-            Item glass = new Item(new string[] { "magnifying glass", "magnify", "glass", "zoom in" }, "magnifying glass", "A magnifying glass for adventurers");
+            Item glass = new Item(new string[] { "magnifying-glass", "magnify", "glass", "zoom in" }, "magnifying glass", "A magnifying glass for adventurers");
             playerBag.Inventory.Put(glass);
 
             Console.WriteLine("Player inventory created.");
@@ -38,6 +38,7 @@ namespace SwinAdventure
             {
                 playerCommand = Console.ReadLine();
                 look.Execute(player, playerCommand.Split());
+                Console.WriteLine(look.Execute(player, playerCommand.Split()));
             } while (playerCommand != "end program");
 
         }
