@@ -4,10 +4,11 @@ namespace SwinAdventure
     public class Player : GameObject, IHaveInventory
     {
         private Inventory _inventory;
-
+        private Location _location;
         public Player(string name, string desc) : base(new string[] {"me", "inventory"}, name, desc)
         {
             _inventory = new Inventory();
+            _location = new Location("here".Split(), "here", "here");
         }
 
         public GameObject Locate(string id) 
@@ -22,6 +23,14 @@ namespace SwinAdventure
                 // If yes, ask if an Item is "id" and if it matches the 
                 // identifier we are looking for then return it
                 return _inventory.Fetch(id);
+            }
+            else if(_location.AreYou(id))
+            {
+                return _location;
+            }
+            else if(_location.FetchItem(id) != null)
+            {
+                return _location.FetchItem(id);
             }
             else
             {
