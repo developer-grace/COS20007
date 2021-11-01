@@ -8,7 +8,7 @@ namespace SwinAdventure
         public Player(string name, string desc) : base(new string[] {"me", "inventory"}, name, desc)
         {
             _inventory = new Inventory();
-            _location = new Location("here".Split(), "here", "here");
+            _location = new Location("here".Split(), "Unknown Location", "here");
         }
 
         public Player(string name, string desc, Location location) : base(new string[] { "me", "inventory" }, name, desc)
