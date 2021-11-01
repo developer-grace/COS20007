@@ -18,10 +18,9 @@ namespace SwinAdventure
             set { _identifier = value; }
         }
 
-        public string Name
+        public string LocationName
         {
             get { return _name; }
-            set { _name = value; }
         }
 
         public string LocationDesc
