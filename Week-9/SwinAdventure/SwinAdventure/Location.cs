@@ -32,5 +32,9 @@ namespace SwinAdventure
         {
             return _inventory.Fetch(id);
         }
+        public void PutItem(Item item)
+        {
+            _inventory.Put(item);
+        }
     }
 }

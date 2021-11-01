@@ -11,6 +11,12 @@ namespace SwinAdventure
             _location = new Location("here".Split(), "here", "here");
         }
 
+        public Player(string name, string desc, Location location) : base(new string[] { "me", "inventory" }, name, desc)
+        {
+            _inventory = new Inventory();
+            _location = location;
+        }
+
         public GameObject Locate(string id) 
         {
             if (AreYou(id)) // Are we trying to locate the Player itself?
@@ -37,6 +43,11 @@ namespace SwinAdventure
                 // otherwise return nothing
                 return null;
             }
+        }
+
+        public string WhereAreYou()
+        {
+            return _location.ToString();
         }
 
 
